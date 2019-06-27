@@ -1,0 +1,11 @@
+<h1>All Celebrities</h1>
+
+
+<a href="/celebrities/new">Create celebrity</a>
+{{#each celebrities}}
+{{!-- Since you're doing a for each you're using "this" key for every values(object,strings etc...) in an array --}}
+<p>{{this.name}}</p>
+<a href="/celebrities/{{this._id}}/show">Details</a>
+<a href="/celebrities/{{this._id}}/delete">Delete</a>
+<a href="/celebrities/{{this._id}}/edit">Edit</a>
+{{/each}}
